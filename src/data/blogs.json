@@ -1,0 +1,63 @@
+[
+  {
+    "id": "1",
+    "image": "blog-1.jpg",
+    "title": "Beyond the Checklist: How Resource-Constrained Non-Profits Can Actually Implement Financial Controls",
+    "tag": "Non-Profit",
+    "date": "November 26, 2025",
+    "excerpt": "By now, you've probably read the list. You know the 21 financial controls your non-profit should have. You probably nodded along, maybe even forwarded it...",
+    "content": "By now, you've probably read the list. You know the 21 financial controls your non-profit should have. You probably nodded along, maybe even forwarded it to your finance team. But here's the reality: implementing comprehensive financial controls when you're operating with limited resources isn't just challenging—it can feel impossible.\n\nMany non-profit leaders find themselves caught between the ideal (what best practices recommend) and the practical (what their budget and staff capacity allow). This gap often leads to either paralysis—doing nothing because you can't do everything—or frustration—trying to implement controls that don't fit your organization's size or complexity.\n\nThe truth is, effective financial controls aren't about checking every box on a generic list. They're about identifying and mitigating the specific risks your organization faces, then implementing controls that are proportional to those risks and your resources.\n\nIn this article, we'll explore:\n\n- How to prioritize financial controls based on your organization's actual risk profile\n- Practical implementation strategies for resource-constrained non-profits\n- Ways to leverage technology and outsourcing to bridge capacity gaps\n- Real-world examples of non-profits that have successfully implemented controls without breaking the bank\n\nWhether you're a small community organization or a mid-size non-profit looking to scale, this guide will help you move beyond the checklist and toward a financial control system that actually works for your organization.",
+    "author": "Sarah Johnson",
+    "category": "Financial Management",
+    "readTime": "8 min read",
+    "large": true,
+    "width": 644,
+    "height": 363
+  },
+  {
+    "id": "2",
+    "image": "blog-2.jpg",
+    "title": "When Is It Time to Outsource Your Restaurant Financial Reporting?",
+    "tag": "Restaurant",
+    "date": "November 20, 2025",
+    "excerpt": "Running a restaurant means juggling countless responsibilities—from menu planning to staff management to customer service. Financial reporting often gets pushed to the back burner, but it shouldn't.",
+    "content": "Running a restaurant means juggling countless responsibilities—from menu planning to staff management to customer service. Financial reporting often gets pushed to the back burner, but it shouldn't. Accurate, timely financial reporting is crucial for making informed decisions about your business.\n\nHowever, many restaurant owners struggle with financial reporting because:\n\n- They lack the accounting expertise needed to produce accurate reports\n- They don't have time to dedicate to financial analysis\n- Their current reporting doesn't provide actionable insights\n- They're spending too much time on bookkeeping instead of running their restaurant\n\nIf any of these sound familiar, it might be time to consider outsourcing your financial reporting. In this article, we'll explore the signs that indicate outsourcing is the right move, what to look for in a financial reporting partner, and how outsourcing can actually save you money while improving your decision-making.\n\nWe'll also share real examples of restaurants that have transformed their operations by outsourcing financial reporting, and provide a framework for evaluating whether outsourcing makes sense for your specific situation.",
+    "author": "Michael Chen",
+    "category": "Restaurant Operations",
+    "readTime": "6 min read",
+    "large": false,
+    "width": 202,
+    "height": 162
+  },
+  {
+    "id": "3",
+    "image": "blog-3.png",
+    "title": "HR & Payroll After a Merger: Your Questions Answered",
+    "tag": "HR Services",
+    "date": "November 12, 2025",
+    "excerpt": "Mergers and acquisitions bring significant challenges, especially when it comes to HR and payroll. Combining two organizations means integrating different systems, processes, and cultures.",
+    "content": "Mergers and acquisitions bring significant challenges, especially when it comes to HR and payroll. Combining two organizations means integrating different systems, processes, and cultures—all while maintaining compliance and keeping employees paid on time.\n\nIn this comprehensive guide, we answer the most common questions about managing HR and payroll after a merger:\n\n**Q: How do we handle different payroll systems?**\nA: The key is to standardize on one system quickly while ensuring no data is lost in the transition. We recommend a phased approach that maintains both systems temporarily before migrating to a unified platform.\n\n**Q: What about different benefit packages?**\nA: This is often one of the most complex aspects. You'll need to evaluate both benefit structures, communicate changes clearly to employees, and potentially offer a transition period.\n\n**Q: How do we maintain compliance during the transition?**\nA: Compliance must be a priority from day one. Work with HR and legal experts to ensure all employment laws, tax requirements, and reporting obligations are met throughout the process.\n\n**Q: What's the timeline for full integration?**\nA: Most organizations can achieve basic payroll integration within 30-60 days, but full HR system integration typically takes 90-180 days depending on complexity.\n\nWe'll also cover best practices for communication, change management, and ensuring a smooth transition for all employees.",
+    "author": "Emily Rodriguez",
+    "category": "Human Resources",
+    "readTime": "7 min read",
+    "large": false,
+    "width": 202,
+    "height": 162
+  },
+  {
+    "id": "4",
+    "image": "blog-4.png",
+    "title": "Maximizing Grant Revenue through Strategic Cost Allocation",
+    "tag": "Client Story",
+    "date": "Latest",
+    "excerpt": "Learn how a mid-size non-profit increased their grant revenue by 40% through strategic cost allocation and improved financial reporting.",
+    "content": "When the Community Health Initiative (CHI) came to us, they were struggling with grant management. Despite running impactful programs, they were leaving money on the table because they couldn't accurately allocate costs to specific grants.\n\n**The Challenge:**\nCHI had multiple grants funding different aspects of their programs, but their cost allocation methodology was inconsistent. This led to:\n\n- Under-recovery of indirect costs\n- Difficulty demonstrating program efficiency to funders\n- Time-consuming grant reporting processes\n- Missed opportunities for additional funding\n\n**The Solution:**\nWe implemented a strategic cost allocation system that:\n\n1. Established clear methodologies for direct and indirect cost allocation\n2. Created automated systems for tracking time and expenses by grant\n3. Developed standardized reporting templates for grant applications\n4. Trained staff on proper documentation and allocation practices\n\n**The Results:**\nWithin 12 months, CHI saw:\n\n- 40% increase in grant revenue\n- 60% reduction in grant reporting time\n- Improved relationships with funders due to transparent reporting\n- Better program planning based on accurate cost data\n\n**Key Takeaways:**\n\n1. Proper cost allocation isn't just about compliance—it's about maximizing your funding\n2. Technology can significantly streamline the allocation process\n3. Clear documentation and processes are essential for grant success\n4. Strategic cost allocation provides insights that improve program planning\n\nThis case study demonstrates how the right financial systems and processes can directly impact your organization's ability to secure and manage grant funding.",
+    "author": "David Thompson",
+    "category": "Case Study",
+    "readTime": "10 min read",
+    "large": false,
+    "width": 202,
+    "height": 162
+  }
+]
+
