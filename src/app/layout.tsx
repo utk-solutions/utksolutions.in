@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -9,8 +10,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Pixology - Building Digital Product",
-  description: "At Pixology we specialize in designing, building, shipping and scaling beautiful, usable products with blazing-fast efficiency",
+  title: "UtkSolutions - Enterprise Cloud & IT Services",
+  description: "Leading provider of cloud engineering, DevOps, cybersecurity, and digital transformation services for modern businesses.",
+  keywords: ["Cloud Consulting", "IT Services", "DevOps", "Cybersecurity", "Software Development", "Managed IT"],
 };
 
 export default function RootLayout({
@@ -19,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${dmSans.variable} font-sans antialiased`} style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
+    <html lang="en" className="scroll-smooth">
+      <body className={cn(dmSans.variable, "font-sans antialiased bg-white")}>
         {children}
       </body>
     </html>
