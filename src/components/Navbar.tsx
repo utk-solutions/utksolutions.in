@@ -31,7 +31,7 @@ export default function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           isScrolled
-            ? "bg-white/90 backdrop-blur-md shadow-sm py-4"
+            ? "bg-white/80 backdrop-blur-xl shadow-sm py-4 border-b border-white/20 supports-[backdrop-filter]:bg-white/60"
             : "bg-transparent py-6"
         )}
       >
@@ -57,7 +57,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="#contact"
+              href="/book-consultancy"
               className="px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all transform hover:-translate-y-0.5"
             >
               Get Started
@@ -96,7 +96,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="#contact"
+                href="/book-consultancy"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="mt-4 w-full py-4 rounded-xl bg-primary text-white text-center font-bold text-lg shadow-lg shadow-primary/25"
               >

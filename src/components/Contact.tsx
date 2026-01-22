@@ -48,8 +48,19 @@ export default function Contact() {
     setSubmitStatus('idle');
 
     try {
-      // Simulate API call - replace with actual API endpoint
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to submit form');
+      }
       
       setSubmitStatus('success');
       setFormData({ name: '', email: '', company: '', message: '' });
@@ -59,7 +70,7 @@ export default function Contact() {
       }, 5000);
     } catch (error) {
       setSubmitStatus('error');
-      setErrorMessage('Something went wrong. Please try again.');
+      setErrorMessage(error instanceof Error ? error.message : 'Something went wrong. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
