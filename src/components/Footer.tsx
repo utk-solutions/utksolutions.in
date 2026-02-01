@@ -1,87 +1,153 @@
 import Link from "next/link";
-import { Facebook, Twitter, Linkedin, Instagram, ArrowRight } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Instagram, ArrowRight, Mail, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  const services = [
+    { name: "Cloud Engineering", href: "/services" },
+    { name: "DevOps & CI/CD", href: "/services" },
+    { name: "Managed IT Services", href: "/services" },
+    { name: "Cybersecurity", href: "/services" },
+    { name: "Software Development", href: "/services" },
+  ];
+
+  const company = [
+    { name: "About Us", href: "/About" },
+    { name: "Our Services", href: "/services" },
+    { name: "Blog", href: "/blogs" },
+    { name: "Contact", href: "#contact" },
+  ];
+
+  const socials = [
+    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Instagram, href: "#", label: "Instagram" },
+  ];
+
   return (
-    <footer className="bg-white/50 backdrop-blur-md border-t border-gray-200/50 pt-20 pb-10 relative z-10">
-      <div className="container px-4 mx-auto">
+    <footer className="bg-slate-950 border-t border-white/5 pt-20 pb-8 relative z-10">
+      {/* Background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full bg-violet-600/5 blur-[120px]" />
+        <div className="absolute top-0 right-1/4 w-[300px] h-[300px] rounded-full bg-indigo-600/5 blur-[100px]" />
+      </div>
+
+      <div className="container px-4 sm:px-6 lg:px-8 mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          {/* Brand */}
           <div>
-            <Link href="/" className="inline-block mb-6">
-              <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-                UtkSolutions
+            <Link href="/" className="inline-flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center">
+                <span className="text-white font-bold text-lg">U</span>
+              </div>
+              <span className="text-xl font-bold text-white">
+                Utk<span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">Solutions</span>
               </span>
             </Link>
-            <p className="text-gray-500 mb-6 leading-relaxed">
+            <p className="text-slate-400 mb-6 leading-relaxed text-sm">
               Empowering businesses with enterprise-grade cloud solutions and digital transformation services.
             </p>
-            <div className="flex gap-4">
-              {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
+            <div className="flex gap-3">
+              {socials.map((social, i) => (
                 <a
                   key={i}
-                  href="#"
-                  className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary transition-colors"
+                  href={social.href}
+                  aria-label={social.label}
+                  className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-violet-400 hover:border-violet-500/30 hover:bg-violet-500/10 transition-all"
                 >
-                  <Icon size={18} />
+                  <social.icon size={18} />
                 </a>
               ))}
             </div>
           </div>
 
+          {/* Services */}
           <div>
-            <h4 className="font-bold text-gray-900 mb-6">Services</h4>
-            <ul className="space-y-4">
-              {["Cloud Engineering", "DevOps & CI/CD", "Managed IT Services", "Cybersecurity", "Software Development"].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-gray-500 hover:text-primary transition-colors">
-                    {item}
+            <h4 className="font-semibold text-white mb-6">Services</h4>
+            <ul className="space-y-3">
+              {services.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="text-slate-400 hover:text-violet-400 transition-colors text-sm flex items-center gap-2 group"
+                  >
+                    <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                    {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
+          {/* Company */}
           <div>
-            <h4 className="font-bold text-gray-900 mb-6">Company</h4>
-            <ul className="space-y-4">
-              {["About Us", "Our Team", "Careers", "Case Studies", "Contact"].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-gray-500 hover:text-primary transition-colors">
-                    {item}
+            <h4 className="font-semibold text-white mb-6">Company</h4>
+            <ul className="space-y-3">
+              {company.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="text-slate-400 hover:text-violet-400 transition-colors text-sm flex items-center gap-2 group"
+                  >
+                    <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                    {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
+          {/* Contact */}
           <div>
-            <h4 className="font-bold text-gray-900 mb-6">Newsletter</h4>
-            <p className="text-gray-500 mb-6">
-              Subscribe to our newsletter to receive the latest updates and news.
-            </p>
-            <form className="relative">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
-              />
-              <button
-                type="submit"
-                className="absolute right-2 top-2 bottom-2 w-8 h-8 rounded-md bg-primary text-white flex items-center justify-center hover:bg-blue-700 transition-colors"
-              >
-                <ArrowRight size={16} />
-              </button>
-            </form>
+            <h4 className="font-semibold text-white mb-6">Contact Us</h4>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <div className="p-2 rounded-lg bg-violet-500/10 border border-violet-500/20 mt-0.5">
+                  <Mail className="w-4 h-4 text-violet-400" />
+                </div>
+                <div>
+                  <p className="text-slate-500 text-xs mb-0.5">Email</p>
+                  <a href="mailto:hello@utksolutions.com" className="text-slate-300 hover:text-violet-400 transition-colors text-sm">
+                    hello@utksolutions.com
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="p-2 rounded-lg bg-cyan-500/10 border border-cyan-500/20 mt-0.5">
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                </div>
+                <div>
+                  <p className="text-slate-500 text-xs mb-0.5">Phone</p>
+                  <a href="tel:+1234567890" className="text-slate-300 hover:text-violet-400 transition-colors text-sm">
+                    +1 (234) 567-890
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 mt-0.5">
+                  <MapPin className="w-4 h-4 text-emerald-400" />
+                </div>
+                <div>
+                  <p className="text-slate-500 text-xs mb-0.5">Address</p>
+                  <p className="text-slate-300 text-sm">
+                    123 Tech Street, Silicon Valley, CA
+                  </p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
- 
-        <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} UtkSolutions. All rights reserved.
+
+        {/* Bottom bar */}
+        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-slate-500">
+            © {currentYear} UtkSolutions. All rights reserved.
           </p>
-          <div className="flex gap-8 text-sm text-gray-500">
-            <Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link>
+          <div className="flex gap-6 text-sm text-slate-500">
+            <Link href="/privacy" className="hover:text-violet-400 transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-violet-400 transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

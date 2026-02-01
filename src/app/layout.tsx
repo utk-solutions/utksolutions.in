@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import BackgroundAnimation from "@/components/BackgroundAnimation";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -23,9 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={cn(dmSans.variable, "font-sans antialiased bg-background text-foreground relative")}>
-        <BackgroundAnimation />
-        {children}
+      <body className={cn(dmSans.variable, "font-sans antialiased bg-slate-950 text-foreground relative")}>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

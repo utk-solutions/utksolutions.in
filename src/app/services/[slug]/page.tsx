@@ -1,73 +1,123 @@
-import { notFound } from "next/navigation";
+"use client";
+
+import { use } from "react";
 import { services } from "@/lib/data";
+import { notFound } from "next/navigation";
+import { motion } from "framer-motion";
+import { ChevronRight, Sparkles, CheckCircle2, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import CTA from "@/components/CTA";
 
-interface PageProps {
-  params: Promise<{
-    slug: string;
-  }>;
-}
+export default function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = use(params);
+    const service = services.find((s) => s.slug === slug);
 
-// Generate static params for all services (optional, but good for SEO/Performance)
-export async function generateStaticParams() {
-  return services.map((service) => ({
-    slug: service.slug,
-  }));
-}
+    if (!service) {
+        notFound();
+    }
 
-export default async function ServicePage({ params }: PageProps) {
-  const { slug } = await params;
-  const service = services.find((s) => s.slug === slug);
+    return (
+        <div className="bg-slate-950 min-h-screen">
+            {/* Hero Section */}
+            <section className="relative pt-32 pb-20 overflow-hidden">
+                <div className="absolute inset-0 pointer-events-none">
+                    <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-violet-600/10 blur-[120px]" />
+                    <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-indigo-600/10 blur-[100px]" />
+                </div>
 
-  if (!service) {
-    notFound();
-  }
+                <div className="container px-4 sm:px-6 lg:px-8 mx-auto relative z-10">
+                    <div className="max-w-4xl">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="flex items-center gap-2 text-sm text-slate-500 mb-8"
+                        >
+                            <Link href="/" className="hover:text-violet-400 transition-colors">Home</Link>
+                            <ChevronRight className="w-4 h-4" />
+                            <Link href="/services" className="hover:text-violet-400 transition-colors">Services</Link>
+                            <ChevronRight className="w-4 h-4" />
+                            <span className="text-violet-400">{service.title}</span>
+                        </motion.div>
 
-  return (
-    <main className="min-h-screen bg-white">
-      <Navbar />
-      
-      {/* Hero Section */}
-      <div className="bg-slate-900 text-white py-24">
-        <div className="container mx-auto px-4">
-          <Link href="/#services" className="text-primary hover:text-white transition-colors mb-6 inline-block font-semibold">
-            ← Back to Services
-          </Link>
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-6 mt-4">
-            <div className="p-4 bg-white/10 rounded-xl">
-              <service.icon size={48} className="text-primary" />
-            </div>
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">{service.title}</h1>
-              <p className="text-xl text-gray-300 max-w-2xl">{service.description}</p>
-            </div>
-          </div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.1 }}
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 mb-8"
+                        >
+                            <service.icon className="w-5 h-5 text-violet-400" />
+                            <span className="text-sm font-medium text-violet-400">Premium Service</span>
+                        </motion.div>
+
+                        <motion.h1
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2 }}
+                            className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight"
+                        >
+                            {service.title}
+                        </motion.h1>
+
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.3 }}
+                            className="text-xl text-slate-400 mb-12 max-w-2xl leading-relaxed"
+                        >
+                            {service.description}
+                        </motion.p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Content Section */}
+            <section className="py-20 relative border-t border-white/5">
+                <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+                    <div className="grid lg:grid-cols-3 gap-16">
+                        <div className="lg:col-span-2">
+                            <div className="prose prose-invert prose-slate max-w-none">
+                                <div
+                                    className="text-slate-300 space-y-6 text-lg"
+                                    dangerouslySetInnerHTML={{ __html: service.details }}
+                                />
+                            </div>
+                        </div>
+
+                        <div className="lg:col-span-1">
+                            <div className="sticky top-32 space-y-8">
+                                {/* Benefits Card */}
+                                <div className="p-8 rounded-3xl bg-slate-900/40 border border-white/5 backdrop-blur-sm">
+                                    <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                                        <Sparkles className="w-5 h-5 text-violet-400" />
+                                        Key Benefits
+                                    </h3>
+                                    <div className="space-y-4">
+                                        {[
+                                            "Scalable Solutions",
+                                            "Enterprise Security",
+                                            "Cost Optimization",
+                                            "Expert Implementation",
+                                            "24/7 Monitoring"
+                                        ].map((benefit, i) => (
+                                            <div key={i} className="flex items-start gap-3 text-slate-400">
+                                                <CheckCircle2 className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" />
+                                                <span>{benefit}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    <button className="w-full mt-8 py-4 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-bold hover:brightness-110 transition-all flex items-center justify-center gap-2 group">
+                                        Start Project
+                                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <CTA />
         </div>
-      </div>
-
-      {/* Content Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div 
-            className="prose prose-lg max-w-none prose-headings:text-slate-900 prose-p:text-gray-600 prose-strong:text-slate-900 prose-li:text-gray-600"
-            dangerouslySetInnerHTML={{ __html: service.details }}
-          />
-          
-          <div className="mt-16 pt-8 border-t border-gray-100">
-            <h3 className="text-2xl font-bold mb-6">Ready to get started?</h3>
-            <Link 
-              href="/#contact" 
-              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Contact Us About {service.title}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </main>
-  );
+    );
 }
