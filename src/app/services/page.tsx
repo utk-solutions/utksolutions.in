@@ -122,61 +122,6 @@ export default function ServicesPage() {
                 </div>
             </section>
 
-            {/* Why Our Services Section */}
-            <section className="py-24 bg-slate-900/50 relative overflow-hidden">
-                <div className="container px-4 sm:px-6 lg:px-8 mx-auto relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <Reveal direction="left">
-                                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
-                                    <Zap className="w-4 h-4 text-emerald-400" />
-                                    <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 text-primary">The UT Advantage</span>
-                                </div>
-                                <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">
-                                    Engineering Excellence with a <span className="text-emerald-400">Modern Approach</span>
-                                </h2>
-                                <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                                    We don&apos;t just deliver services; we build strategic partnerships. Our methodology combines technical deep-dives with business-centric goals to ensure every line of code adds value.
-                                </p>
-
-                                <div className="grid sm:grid-cols-2 gap-6">
-                                    {[
-                                        { icon: Shield, title: "Security First", desc: "Built-in protection for all digital assets.", color: "text-blue-400" },
-                                        { icon: BarChart, title: "Data Driven", desc: "Decisions backed by rigorous analytics.", color: "text-purple-400" }
-                                    ].map((item, i) => (
-                                        <div key={i} className="p-6 rounded-2xl bg-slate-950 border border-white/5">
-                                            <item.icon className={`w-8 h-8 ${item.color} mb-4`} />
-                                            <h4 className="text-white font-bold mb-2">{item.title}</h4>
-                                            <p className="text-slate-500 text-sm">{item.desc}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </Reveal>
-                        </div>
-
-                        <div className="relative">
-                            <Reveal direction="right">
-                                <div className="relative rounded-[2rem] overflow-hidden border border-white/10 group">
-                                    <div className="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center p-12">
-                                        <div className="grid grid-cols-2 gap-4 w-full">
-                                            {[...Array(4)].map((_, i) => (
-                                                <div key={i} className="h-32 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center animate-pulse" style={{ animationDelay: `${i * 0.2}s` }}>
-                                                    <Plus className="text-white/10 w-8 h-8" />
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                    {/* Decorative tag */}
-                                    <div className="absolute top-4 right-4 bg-violet-600 text-white text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-tight">
-                                        Standard of Quality
-                                    </div>
-                                </div>
-                            </Reveal>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             {/* CTA Section */}
             <CTA />
         </div>
