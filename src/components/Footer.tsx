@@ -5,11 +5,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { name: "Cloud Engineering", href: "//services/cloud-engineering" },
-    { name: "DevOps & CI/CD", href: "//services/devops-support" },
-    { name: "Managed IT Services", href: "//services/managed-it-services" },
-    { name: "Cybersecurity", href: "//services/cybersecurity" },
-    { name: "Software Development", href: "//services/software-development" },
+    { name: "Cloud Engineering", href: "/services/cloud-engineering" },
+    { name: "DevOps & CI/CD", href: "/services/devops-support" },
+    { name: "Managed IT Services", href: "/services/managed-it-services" },
+    { name: "Cybersecurity", href: "/services/cybersecurity" },
+    { name: "Software Development", href: "/services/software-development" },
   ];
 
   const company = [
@@ -109,8 +109,8 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-slate-500 text-xs mb-0.5">Email</p>
-                  <a href="mailto:support@utksolutions.com" className="text-slate-300 hover:text-violet-400 transition-colors text-sm">
-                    support@utksolutions.com
+                  <a href="mailto:support@utksolutions.in" className="text-slate-300 hover:text-violet-400 transition-colors text-sm">
+                    support@utksolutions.in
                   </a>
                 </div>
               </li>
@@ -120,8 +120,8 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-slate-500 text-xs mb-0.5">Phone</p>
-                  <a href="tel:+91 9970 80 4242" className="text-slate-300 hover:text-violet-400 transition-colors text-sm">
-                    +91 9970 80 4242
+                  <a href="tel:+919970804242" className="text-slate-300 hover:text-violet-400 transition-colors text-sm">
+                    +919970804242
                   </a>
                 </div>
               </li>
@@ -132,7 +132,7 @@ export default function Footer() {
                 <div>
                   <p className="text-slate-500 text-xs mb-0.5">Address</p>
                   <p className="text-slate-300 text-sm">
-                    B-105 Reva ComplexViman Nagar Symbiosis Road Pune | IND.
+                    B-105 Reva Complex, Viman Nagar, Symbiosis Road, Pune — India
                   </p>
                 </div>
               </li>
