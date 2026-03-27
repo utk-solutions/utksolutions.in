@@ -41,7 +41,7 @@ const coreValues = [
 // Stats data
 const stats = [
     { value: "10+", label: "Years Experience" },
-    { value: "500+", label: "Projects Delivered" },
+    { value: "15+", label: "Projects Delivered" },
     { value: "98%", label: "Client Retention" },
     { value: "50+", label: "Team Members" },
 ];
