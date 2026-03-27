@@ -43,7 +43,7 @@ const stats = [
     { value: "10+", label: "Years Experience" },
     { value: "15+", label: "Projects Delivered" },
     { value: "98%", label: "Client Retention" },
-    { value: "50+", label: "Team Members" },
+    { value: "20+", label: "Team Members" },
 ];
 
 // Timeline data
@@ -211,7 +211,7 @@ export default function AboutPage() {
                                     <div className="p-1.5 rounded-lg bg-cyan-500/20 border border-cyan-500/20">
                                         <Users className="w-4 h-4 text-cyan-400" />
                                     </div>
-                                    <span className="text-white text-sm font-medium">50+ Experts</span>
+                                    <span className="text-white text-sm font-medium">20+ Experts</span>
                                 </div>
                             </div>
                         </motion.div>
