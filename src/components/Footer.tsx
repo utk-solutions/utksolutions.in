@@ -132,7 +132,7 @@ export default function Footer() {
                 <div>
                   <p className="text-slate-500 text-xs mb-0.5">Address</p>
                   <p className="text-slate-300 text-sm">
-                    Viman Nagar Symbiosis RD Pune-411014, MH IND.
+                    B-105 Reva ComplexViman Nagar Symbiosis Road Pune | IND.
                   </p>
                 </div>
               </li>
