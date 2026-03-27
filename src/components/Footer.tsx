@@ -109,8 +109,8 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-slate-500 text-xs mb-0.5">Email</p>
-                  <a href="mailto:hello@utksolutions.com" className="text-slate-300 hover:text-violet-400 transition-colors text-sm">
-                    hello@utksolutions.com
+                  <a href="mailto:support@utksolutions.com" className="text-slate-300 hover:text-violet-400 transition-colors text-sm">
+                    support@utksolutions.com
                   </a>
                 </div>
               </li>
@@ -120,8 +120,8 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-slate-500 text-xs mb-0.5">Phone</p>
-                  <a href="tel:+1234567890" className="text-slate-300 hover:text-violet-400 transition-colors text-sm">
-                    +1 (234) 567-890
+                  <a href="tel:+91 9970 80 4242" className="text-slate-300 hover:text-violet-400 transition-colors text-sm">
+                    +91 9970 80 4242
                   </a>
                 </div>
               </li>
@@ -132,7 +132,7 @@ export default function Footer() {
                 <div>
                   <p className="text-slate-500 text-xs mb-0.5">Address</p>
                   <p className="text-slate-300 text-sm">
-                    123 Tech Street, Silicon Valley, CA
+                    Viman Nagar Symbiosis RD Pune-411014, MH IND.
                   </p>
                 </div>
               </li>
