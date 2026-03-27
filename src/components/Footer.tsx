@@ -5,11 +5,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { name: "Cloud Engineering", href: "/services" },
-    { name: "DevOps & CI/CD", href: "/services" },
-    { name: "Managed IT Services", href: "/services" },
-    { name: "Cybersecurity", href: "/services" },
-    { name: "Software Development", href: "/services" },
+    { name: "Cloud Engineering", href: "//services/cloud-engineering" },
+    { name: "DevOps & CI/CD", href: "//services/devops-support" },
+    { name: "Managed IT Services", href: "//services/managed-it-services" },
+    { name: "Cybersecurity", href: "//services/cybersecurity" },
+    { name: "Software Development", href: "//services/software-development" },
   ];
 
   const company = [
